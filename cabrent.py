@@ -12,7 +12,7 @@ if __name__=="__main__":
     pm=''
 #===================================================================================================
 # Create Database
-    con = sqlite3.connect("14_set5.db")
+    con = sqlite3.connect("data.db")
     c = con.cursor()
     c.execute("""CREATE TABLE IF NOT EXISTS Rental(receiptNum text,date text,
                 company text,representative text,location text,statezip text,phoneRep text,
@@ -94,7 +94,7 @@ if __name__=="__main__":
         else:pm=other.get() 
     # the variables being inserted into the Table
     # e1,e2,r1,r2,r3,r4,r5,l1,l2,l3,l4,l5,v1,v2,v3,v4,v5,v6,v7,tot,ap,pm
-        con = sqlite3.connect("14_set5.db")
+        con = sqlite3.connect("data.db")
         c = con.cursor()
         c.execute("INSERT INTO Rental VALUES (:a,:b,:c,:d,:e,:f,:g,:h,:i,:j,:k,:l,:m,:n,:o,:p,:q,:r,:s,:t,:v)",
                 {   'a':e2.get(),'b':e1.get(),               
@@ -107,7 +107,7 @@ if __name__=="__main__":
         messagebox.showinfo("Success","Submitted !")          
 # Show
     def show():
-        con = sqlite3.connect("14_set5.db")
+        con = sqlite3.connect("data.db")
         c = con.cursor()
         c.execute("SELECT * FROM Rental")
         datas = c.fetchall()
@@ -205,7 +205,7 @@ if __name__=="__main__":
 #====================================================================================================
 # Main Frame 
     root=Tk()
-    root.title("014   Set5")
+    root.title("Cab Rental")
     root.geometry("+380+100")
 # Receipt BLock
     Label(root, text="Rental Receipt", font=("",14),fg='darkred').grid(row=0,column=2)
