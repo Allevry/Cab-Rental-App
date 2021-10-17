@@ -2,10 +2,10 @@ from tkinter import *
 from tkinter import ttk,messagebox
 import sqlite3
 
-if __name__=="__main__":
+if __name__ == "__main__":
 # Variables
-    fclick=False
-    pm=''
+    fclick = False
+    pm = ''
 #===================================================================================================
 # Create Database
     con = sqlite3.connect("data.db")
