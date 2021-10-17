@@ -1,7 +1,3 @@
-'''Python App using tkinter with integrated database using sqlite3
-Author : Allevry
-Date : 26/4/21
-'''
 from tkinter import *
 from tkinter import ttk,messagebox
 import sqlite3
