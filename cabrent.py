@@ -26,25 +26,37 @@ if __name__ == "__main__":
             messagebox.showerror("Error","No Field(s) can be empty !")
         else:
             fclick=True                  # the fill button was clicked 
-            vin.config(state='normal') 
+            
+            vin.config(state='normal')
+            vin.delete(0,END)
             vin.insert(0,v1.get())    
             vin.config(state='disabled')
+            
             lt.config(state='normal')
             A=round(float(cd.get())*float(d.get())+float(ac.get()), 2)
+            lt.delete(0,END)
             lt.insert(0,str(A))
             lt.config(state='disabled')
+            
             s.config(state='normal')
+            s.delete(0,END)
             s.insert(0,str(A))
-            s.config(state='disabled')          
+            s.config(state='disabled')
+            
             tax.config(state='normal')
             B=round(A * 0.18 , 2)
+            tax.delete(0,END)
             tax.insert(0,str(B))
-            tax.config(state='disabled')            
+            tax.config(state='disabled')
+            
             tot.config(state='normal')
             C=A+B
+            tot.delete(0,END)
             tot.insert(0,str(C))
-            tot.config(state='disabled')            
+            tot.config(state='disabled')
+            
             ap.config(state='normal')
+            ap.delete(0,END)
             ap.insert(0,str(C))
             ap.config(state='disabled')
 # Validate
